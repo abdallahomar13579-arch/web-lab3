@@ -13,5 +13,8 @@ function calculateClassAverage(students, courseId) {
   if (grades.length === 0) {
     return 0;
   }
-  
+
+  const total = grades.reduce((sum, grade) => sum + grade, 0);
+  return total / grades.length;
 }
+
