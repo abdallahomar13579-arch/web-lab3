@@ -9,5 +9,7 @@ class Student {
     this.name = name;
     this.courses = courses || [];
    }
-   
+   addCourse(courseId, grade) {
+    this.courses.push({ courseId: courseId, grade: grade });
+  }
 }
