@@ -37,3 +37,5 @@ function filterStudents(students, criteriaFn) {
  
   return result;
 }
+
+module.exports = { calculateClassAverage, findTopStudent, filterStudents };
