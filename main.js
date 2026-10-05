@@ -28,4 +28,11 @@ fetchStudents((rawData) => {
  
   const avg101 = calculateClassAverage(students, 101);
   console.log("Class Average for Course 101: " + avg101.toFixed(2));
+
+  const top = findTopStudent(students);
+  console.log("Top Student: " + top.name + " (Average: " + top.getAverage() + ")");
+
+  const in102 = filterStudents(students, (s) => s.courses.some((c) => c.courseId === 102));
+
+  console.log("Students in Course 102: " + in102.map((s) => s.name).join(", "))
 });
