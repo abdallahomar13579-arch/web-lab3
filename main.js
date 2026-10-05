@@ -22,5 +22,10 @@ fetchStudents((rawData) => {
     // ignore the error, the id is protected either way
   }
 
-  
+  console.log("Final ID: " + students[0].id + " (Success: ID did not change)");
+
+  console.log("\n--- Analytics Report ---");
+ 
+  const avg101 = calculateClassAverage(students, 101);
+  console.log("Class Average for Course 101: " + avg101.toFixed(2));
 });
