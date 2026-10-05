@@ -6,5 +6,8 @@ class Student {
       configurable: false,   
       enumerable: true      
     });
+    this.name = name;
+    this.courses = courses || [];
    }
+   
 }
