@@ -25,3 +25,15 @@ function findTopStudent(students) {
     return current.getAverage() > best.getAverage() ? current : best;
   });
 }
+
+function filterStudents(students, criteriaFn) {
+  const result = [];
+ 
+  for (const student of students) {
+    if (criteriaFn(student)) {
+      result.push(student);
+    }
+  }
+ 
+  return result;
+}
