@@ -15,5 +15,12 @@ fetchStudents((rawData) => {
   console.log("\nTesting Immutability:");
   console.log("Original ID: " + students[0].id);
   console.log("Attempting to change ID to 999...");
- 
+
+  try {
+    students[0].id = 999; // this should NOT change anything
+  } catch (error) {
+    // ignore the error, the id is protected either way
+  }
+
+  
 });
