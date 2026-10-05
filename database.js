@@ -11,3 +11,5 @@ function fetchStudents(callback) {
 
   }, 2000);
 }
+
+module.exports = { fetchStudents };``
