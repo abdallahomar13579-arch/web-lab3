@@ -18,3 +18,10 @@ function calculateClassAverage(students, courseId) {
   return total / grades.length;
 }
 
+function findTopStudent(students) {
+
+    return students.reduce((best, current) => {
+   
+    return current.getAverage() > best.getAverage() ? current : best;
+  });
+}
