@@ -1,7 +1,7 @@
 function calculateClassAverage(students, courseId) {
 
     const grades = [];
-    
+
   students.forEach((student) => {
     student.courses.forEach((course) => {
       if (course.courseId === courseId) {
@@ -9,4 +9,9 @@ function calculateClassAverage(students, courseId) {
       }
     });
   });
+
+  if (grades.length === 0) {
+    return 0;
+  }
+  
 }
