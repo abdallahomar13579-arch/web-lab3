@@ -18,5 +18,8 @@ class Student {
     }
 
     const total = this.courses.reduce((sum, course) => sum + course.grade, 0);
+
+    return total / this.courses.length;
+    
   }  
 }
